@@ -1,0 +1,5 @@
+tabby, tabby cat 0.539124
+tiger cat 0.202183
+Egyptian cat 0.0988736
+lynx, catamount 0.0782376
+Persian cat 0.0185726

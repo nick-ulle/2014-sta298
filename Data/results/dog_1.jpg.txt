@@ -1,0 +1,5 @@
+Great Dane 0.790137
+Walker hound, Walker foxhound 0.0587769
+dalmatian, coach dog, carriage dog 0.0326808
+German short-haired pointer 0.0241276
+Greater Swiss Mountain dog 0.0222736

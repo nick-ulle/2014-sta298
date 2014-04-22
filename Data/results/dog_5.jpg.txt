@@ -1,0 +1,5 @@
+German shepherd, German shepherd dog, German police dog, alsatian 0.978196
+malinois 0.0217286
+groenendael 3.39646e-05
+African hunting dog, hyena dog, Cape hunting dog, Lycaon pictus 2.91605e-05
+Leonberg 8.73555e-06

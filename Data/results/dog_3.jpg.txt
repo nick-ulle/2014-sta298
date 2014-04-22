@@ -1,0 +1,5 @@
+Walker hound, Walker foxhound 0.518228
+beagle 0.198932
+English foxhound 0.151522
+basset, basset hound 0.0323843
+Labrador retriever 0.03112

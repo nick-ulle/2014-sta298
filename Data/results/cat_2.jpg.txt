@@ -1,0 +1,5 @@
+black-footed ferret, ferret, Mustela nigripes 0.134671
+Old English sheepdog, bobtail 0.119535
+Great Pyrenees 0.116399
+Pekinese, Pekingese, Peke 0.0696065
+kuvasz 0.0446146

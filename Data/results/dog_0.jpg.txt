@@ -1,0 +1,5 @@
+malinois 0.373991
+German shepherd, German shepherd dog, German police dog, alsatian 0.275574
+Norwegian elkhound, elkhound 0.246372
+Pembroke, Pembroke Welsh corgi 0.0211898
+kelpie 0.0133788

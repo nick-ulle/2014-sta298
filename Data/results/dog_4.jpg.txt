@@ -1,0 +1,5 @@
+dingo, warrigal, warragal, Canis dingo 0.0591611
+Labrador retriever 0.0503609
+white wolf, Arctic wolf, Canis lupus tundrarum 0.0463991
+chow, chow chow 0.045217
+Angora, Angora rabbit 0.0406613

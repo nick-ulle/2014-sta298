@@ -1,0 +1,5 @@
+Labrador retriever 0.449105
+golden retriever 0.316259
+redbone 0.0804248
+dingo, warrigal, warragal, Canis dingo 0.0259086
+kuvasz 0.0196378

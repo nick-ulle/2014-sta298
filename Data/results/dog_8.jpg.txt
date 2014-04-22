@@ -1,0 +1,5 @@
+curly-coated retriever 0.784201
+Staffordshire bullterrier, Staffordshire bull terrier 0.0941689
+Labrador retriever 0.0541973
+American Staffordshire terrier, Staffordshire terrier, American pit bull terrier, pit bull terrier 0.04101
+Chesapeake Bay retriever 0.0132747

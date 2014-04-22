@@ -1,0 +1,5 @@
+carton 0.24851
+file, file cabinet, filing cabinet 0.220826
+binder, ring-binder 0.0596863
+bookcase 0.0472569
+photocopier 0.0398141

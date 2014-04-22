@@ -1,0 +1,5 @@
+Chihuahua 0.746855
+toy terrier 0.117348
+basenji 0.0227982
+Cardigan, Cardigan Welsh corgi 0.0222691
+kelpie 0.0156678

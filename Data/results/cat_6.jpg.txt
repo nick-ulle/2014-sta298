@@ -1,0 +1,5 @@
+paper towel 0.172826
+piggy bank, penny bank 0.0532423
+soccer ball 0.0404131
+toilet tissue, toilet paper, bathroom tissue 0.0322238
+Egyptian cat 0.0219433

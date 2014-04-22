@@ -1,0 +1,5 @@
+guinea pig, Cavia cobaya 0.112902
+tabby, tabby cat 0.0795149
+mouse, computer mouse 0.0674438
+Shetland sheepdog, Shetland sheep dog, Shetland 0.0641437
+tiger cat 0.0559433
