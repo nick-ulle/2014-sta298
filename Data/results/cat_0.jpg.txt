@@ -1,5 +1,0 @@
-Egyptian cat 0.201495
-Siamese cat, Siamese 0.10367
-schipperke 0.0997552
-hamper 0.0761068
-tabby, tabby cat 0.0602674

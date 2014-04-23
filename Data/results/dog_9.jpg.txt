@@ -1,5 +1,0 @@
-white wolf, Arctic wolf, Canis lupus tundrarum 0.677222
-Eskimo dog, husky 0.117116
-Samoyed, Samoyede 0.0879139
-Siberian husky 0.0478024
-timber wolf, grey wolf, gray wolf, Canis lupus 0.0451798

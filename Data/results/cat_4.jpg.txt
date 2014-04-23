@@ -1,5 +1,0 @@
-tabby, tabby cat 0.819115
-tiger cat 0.0651077
-Egyptian cat 0.0356373
-carton 0.0236428
-bath towel 0.00777804

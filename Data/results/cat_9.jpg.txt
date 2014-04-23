@@ -1,5 +1,0 @@
-tiger cat 0.437503
-tabby, tabby cat 0.297784
-Egyptian cat 0.166152
-tiger, Panthera tigris 0.00915715
-lynx, catamount 0.008348

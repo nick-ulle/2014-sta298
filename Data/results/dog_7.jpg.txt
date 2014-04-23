@@ -1,5 +1,0 @@
-flat-coated retriever 0.621157
-Labrador retriever 0.179108
-Chesapeake Bay retriever 0.125697
-Sussex spaniel 0.0244117
-kelpie 0.023378

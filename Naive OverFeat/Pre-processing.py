@@ -1,8 +1,8 @@
 import os
 from glob import glob
 
-dataDir = 'data/'
-inDir = dataDir+'train_small/'
+dataDir = '/Users/aden/Dropbox/School/STA_298/data/'
+inDir = dataDir+'train/'
 outDir = dataDir+'results/'
 overfeat = '/Users/aden/Dropbox/School/STA_298/overfeat/src/overfeat'
 overfeatData = '/Users/aden/Dropbox/School/STA_298/overfeat/data/default/'

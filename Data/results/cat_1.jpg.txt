@@ -1,5 +1,0 @@
-tiger cat 0.241241
-tabby, tabby cat 0.103301
-Egyptian cat 0.0698587
-lynx, catamount 0.0496167
-kit fox, Vulpes macrotis 0.0313983

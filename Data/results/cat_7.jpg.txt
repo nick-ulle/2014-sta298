@@ -1,5 +1,0 @@
-Egyptian cat 0.792996
-tiger cat 0.0976737
-tabby, tabby cat 0.0691866
-lynx, catamount 0.0395851
-carton 0.000270858

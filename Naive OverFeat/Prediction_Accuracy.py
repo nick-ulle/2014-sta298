@@ -1,6 +1,6 @@
-import numpy
+import numpy as np
 
-predictions = numpy.genfromtxt(outputFile, delimiter=',', dtype=str)
+predictions = np.genfromtxt(outputFile, delimiter=',', dtype=str)
 n = len(predictions)-1
 successes = 0
 
