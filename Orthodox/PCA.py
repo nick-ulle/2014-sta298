@@ -40,8 +40,8 @@ for f in files:
     idVec.append(id)
     i += 1
 
-PCA = RandomizedPCA(n_components=2).fit_transform(bigMatrix)
-pcaData = DataFrame({"PCA1": PCA[:, 0], "PCA2": PCA[:, 1], "label":trueVec, "ID": id})
+pcaResults = RandomizedPCA(n_components=2).fit_transform(bigMatrix)
+pcaData = DataFrame({"PCA1": pcaResults[:, 0], "PCA2": pcaResults[:, 1], "label":trueVec, "ID": idVec})
 
 PCAplot = ggplot(aes(x='PCA1', y='PCA2', colour='label'), data=pcaData) + geom_point() \
     + xlab('Principal Axis 1') + ylab('Principal Axis 2') + ggtitle('PCA stands for Pretty Crummy Algorithm, n=700')
