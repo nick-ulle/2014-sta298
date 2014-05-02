@@ -2,11 +2,18 @@ import os, sys
 from random import choice
 import csv
 
-dataDir = '/home/caden11/Github/Data/'
-inDir = dataDir+'train/'
+import platform
+if platform.system()=='Darwin':
+    dataDir = '/Users/aden/Dropbox/School/STA_298/Github/Data/'
+    overfeat = '/Users/aden/Dropbox/School/STA_298/OverFeat/src/overfeat'
+    overfeatData = '/Users/aden/Dropbox/School/STA_298/OverFeat/data/default/'
+else:
+    dataDir = '/home/caden11/Github/Data/'
+    overfeat = '/home/caden11/OverFeat/src/overfeat'
+    overfeatData = '/home/caden11/OverFeat/data/default/'
+
+inDir = dataDir+'train_small/'
 outDir = dataDir+'results/'
-overfeat = '/home/caden11/OverFeat/src/overfeat'
-overfeatData = '/home/caden11/OverFeat/data/default/'
 
 basenum = sys.argv[1]
 catImage = inDir+"cat_"+str(basenum)+".jpg"

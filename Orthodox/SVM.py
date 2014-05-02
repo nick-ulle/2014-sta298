@@ -5,6 +5,8 @@ import numpy as np
 from sklearn import svm
 from pandas import DataFrame
 
+
+
 dataDir = '/Users/aden/Dropbox/School/STA_298/Data/'
 inDir = dataDir+'train_med/'  # train_med: 1000 cats, 1000 dogs
 # outDir = dataDir+'results/'
