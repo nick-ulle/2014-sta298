@@ -4,17 +4,27 @@ import os
 
 import cv2
 import numpy as np
+from sklearn.cluster import KMeans
 
 import matplotlib.pyplot as plt
 
 SEED = 508
-NUM_CHUNKS = 10**5
+N_CHUNKS = 10**5
 
 def main():
     pass
 
-def make_dict():
-    pass
+def load_chunks(chunk_size = 16):
+    # Load the chunks from the chunks directory.
+    file_list = os.listdir('chunks/')
+    n = len(file_list)
+
+    chunks = np.empty((n, 3 * chunk_size**2))
+    for i, file in enumerate(file_list):
+        image = cv2.imread('chunks/' + file)
+        chunks[i, ] = np.ravel(image)
+
+    return chunks
 
 def make_chunks(n, chunk_size = 16):
     ''' Generate n chunks of the specified size from training data.
