@@ -4,8 +4,8 @@ from glob import glob
 dataDir = '/Users/aden/Dropbox/School/STA_298/data/'
 inDir = dataDir+'train/'
 outDir = dataDir+'results/'
-overfeat = '/Users/aden/Dropbox/School/STA_298/overfeat/src/overfeat'
-overfeatData = '/Users/aden/Dropbox/School/STA_298/overfeat/data/default/'
+overfeat = '/Users/aden/overfeat/src/overfeat'
+overfeatData = '/Users/aden/overfeat/data/default/'
 outputFile = dataDir+'predictions.csv'
 
 cats = dataDir + "cats.txt"

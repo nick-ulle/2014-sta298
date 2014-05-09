@@ -30,8 +30,8 @@
 #SARRAY --range=0,1-9999
 
 # Standard out and Standard Error output files with the job number in the name.
-#SBATCH -e slurm_%j.err
+#SBATCH -e slurm_%j.err -o /dev/null
 
 # Execute each of the jobs with a different index (the python script will then process
 # this to do something different for each index):
-srun python Gauss_for_SVM.py ${SLURM_ARRAYID}
+srun python ExtractLayers.py ${SLURM_ARRAYID}

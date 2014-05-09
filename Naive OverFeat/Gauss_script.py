@@ -5,8 +5,8 @@ import csv
 import platform
 if platform.system()=='Darwin':
     dataDir = '/Users/aden/Dropbox/School/STA_298/Github/Data/'
-    overfeat = '/Users/aden/Dropbox/School/STA_298/OverFeat/src/overfeat'
-    overfeatData = '/Users/aden/Dropbox/School/STA_298/OverFeat/data/default/'
+    overfeat = '/Users/aden/overfeat/src/overfeat'
+    overfeatData = '/Users/aden/overfeat/data/default/'
 else:
     dataDir = '/home/caden11/Github/Data/'
     overfeat = '/home/caden11/OverFeat/src/overfeat'
