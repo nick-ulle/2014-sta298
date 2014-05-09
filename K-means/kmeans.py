@@ -31,20 +31,20 @@ def sp_kmeans(x, k, tol):
     dictionary = np.random.normal(0, 1, (p, k))
     dictionary = dictionary / np.linalg.norm(dictionary, axis = 0)
 
-    err = 0
+    quality = 0
     while True:
         # Recalculate the (n by k) distance matrix.
         distance_matrix = x.dot(dictionary)
 
-        # Maximum entry indicates cluster membership and error.
+        # Maximum entry indicates cluster membership and quality.
         # TODO: Avoid computing argmax and max separately.
         cluster = np.argmax(distance_matrix, axis = 1)
 
-        old_err = err
-        err = np.max(distance_matrix, axis = 1).sum()
+        old_quality = quality
+        quality = np.max(distance_matrix, axis = 1).sum()
 
         # Check stopping condition.
-        if (err - old_err) <= tol:
+        if (quality - old_quality) <= tol:
             break
 
         # Recalculate cluster centroids.
