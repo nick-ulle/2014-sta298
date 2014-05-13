@@ -9,7 +9,7 @@ from sys import exit
 if system()=='Darwin':
     dataDir = '/Users/aden/Dropbox/School/STA_298/data/'
 else:
-    dataDir = '/home/caden11/Github/Data/'
+    dataDir = '/home/cbaden/Github/Data/'
 
 trainDir = dataDir+'results/layers/'
 outDir = dataDir+'results/'
