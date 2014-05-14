@@ -28,4 +28,4 @@ SVM: Use the labels and 4096-vectors to build a support vector machine with a va
 *(Classification Rate: 97.5%)*
 	
 Neural Net: Build a back-propogated neural network with 4096-length input layer and a 1D output layer. Play around with the number of hidden neurons and train until suitable number of iterations passes. Use the trained neural net to predict testing observations. 
-*(Classification Rate: %)*
+*(Classification Rate: 96.9%)*
