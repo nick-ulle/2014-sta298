@@ -11,9 +11,9 @@ if system()=='Darwin':
 else:
     dataDir = '/home/cbaden/Github/Data/'
 
-trainDir = dataDir+'results/layers/'
+trainDir = dataDir+'results/trainLayers/'
 outDir = dataDir+'results/'
-layers = glob(trainDir+'layer_1*.csv')
+trainingLayers = glob(trainDir+'layer_*10.csv')
 
 
 def make_layer_matrix(layers, idxList):
@@ -33,27 +33,27 @@ def make_layer_matrix(layers, idxList):
         i += 2
     return mat, trueVec, idVec
 
-holdout = int(len(layers)*.05)
-trainIdx = [range(holdout, len(layers)-holdout)]
-trainMat, trainTrue, trainID = make_layer_matrix(layers, trainIdx)
+trainIdx = [range(len(trainingLayers))]
+trainMat, trainTrue, trainID = make_layer_matrix(trainingLayers, trainIdx)
 
-testIdx = [range(0, holdout), range(len(layers)-holdout, len(layers))]
-testMat, testTrue, testID = make_layer_matrix(layers, testIdx)
+# Getting a true matrix.
+testingLayers = glob(trainDir+'/test/'+'layer_*.csv')
+testingLayers.sort()
+testMat = np.zeros((len(testingLayers), 4096))  # Big collection of pixels
+idVec = [int(os.path.basename(l).split('.')[0].split('_')[1]) for l in testingLayers]
 
-svmFitLinear = svm.SVC(kernel='linear', cache_size=4096).fit(trainMat, trainTrue)
+i = 0
+for layer in testingLayers:
+    testMat[i, ] = np.genfromtxt(layer, delimiter=',', dtype=None, names=None, skip_header=False)
+    i += 1
+
 svmFitRBF = svm.SVC(kernel='rbf', cache_size=4096).fit(trainMat, trainTrue)
 svmFit3 = svm.SVC(kernel='poly', degree=3, cache_size=4096).fit(trainMat, trainTrue)
-svmFitSigmoid = svm.SVC(kernel='sigmoid', cache_size=4096).fit(trainMat, trainTrue)
-predictionsLinear = svmFitLinear.predict(testMat)
 predictionsRBF = svmFitRBF.predict(testMat)
 predictions3 = svmFit3.predict(testMat)
-predictionsSigmoid = svmFitSigmoid.predict(testMat)
 
-predictDF = DataFrame({"Linear_Predictions": predictionsLinear,
-                       "RadialBasisFunction_Predictions": predictionsRBF,
+predictDF = DataFrame({"RadialBasisFunction_Predictions": predictionsRBF,
                        "Cubic_Predictions": predictions3,
-                       "Sigmoid_Predictions": predictionsSigmoid,
-                       "Truth": testTrue,
-                       "ID": testID})
+                       "ID": idVec})
 predictDF.to_csv(outDir+"SVM_predictions.csv")
 exit()

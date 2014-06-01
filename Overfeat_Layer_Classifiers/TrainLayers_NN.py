@@ -17,7 +17,7 @@ if system()=='Darwin':  # On my mac
 else:  # On any other machine (Stats servers, cluster comp...)
     dataDir = '/home/cbaden/Github/Data/'
 
-trainDir = dataDir+'results/layers/'
+trainDir = dataDir+'results/trainLayers/'
 outDir = dataDir+'results/'
 layers = glob(trainDir+'layer_*.csv')  # Get all layer filenames in layer dir.
 
@@ -54,6 +54,6 @@ f.close()
 
 #f = open('NeuralNet','r')
 #nn = load(f)
-# idVec = [2*[os.path.basename(l)[0: -4].split('_')[1]] for l in layers]
+# idVec = [2*[os.path.basename(l)[0: -4].split('_')[1]] for l in trainLayers]
 # idVec = [x for sl in idVec for x in sl]
 exit()
