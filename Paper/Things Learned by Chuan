@@ -1,0 +1,27 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or epsÂ§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{What I have learned from the Project}
+\author{Chuan Qin}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+\begin{enumerate}
+\item This project has introduced me to some deep and beautiful ideas in machine learning (ML) with applications to image recognition and computer vision. For instance, the machine based on a Convolutional Neural Network (CNN) is trained to extract and identify features from raw images, with built-in invariance with respect to translations, scaling, or local distortion of the input image. This kind of robustness to geometric transformations is achieved by a well-organized coordination between the \emph{convolutional layers} and the \emph{sub-sampling layers} of the network, which are two elements lying in the heart of the CNN design. Those layers, arranged alternately in the network, provide a progressive increase of the richness of the image representation (by convolution), compensated by a progressive reduction of spatial resolution (by sub-sampling). The capability of the CNN to capture local features partially results from the adoption \emph{local receptive fields}, which enforces each unit in a convolutional layer to connect only with a small local neighborhood of units in the previous layer, in contrast to the fully connected layers used in a classical Multilayer Perceptron Network (MLP). The idea behind this design perfectly exemplifies the line of thinking that one usually follows when developing ML algorithms for real-world learning tasks: identify the limitations of the previous algorithms in light of the characteristics of the current problem, and search for improvement. For example, the inventors of CNN must have noticed that: (1) images have a strong 2D local structure containing highly correlated pixels; (2) however, the existing algorithms (namely, fully connected layers) totally ignores the topology of the input; (3) therefore, one has to restrict the connection of each neuron locally in order to extract and combine local features. Having truly understood those crucial ideas as well as the possible routes that people have followed before finally reaching them, I have got a better understanding of the methodology of ML research, and found it not totally impossible to come up with my own algorithms with sufficient experience.
+ 
+\item As a beginner in ML, I have picked up the basics of some important ML algorithms and techniques. We experimented with several classical supervised learning methods when trying to select a classifier to apply to our feature layer extracted from OverFeat. The machine learning concepts that I looked into include support vector machine (SVM), k-nearest neighbors (k-NN), and multilayer perceptron networks. For the first two, I carried out simple learning tasks using libraries from scikit-learn. For the multilayer perceptron classifier, I read into the architecture behind the algorithm and learned the gradient \emph{back propagation} algorithm, trying to understand how it works and how it can be applied to multi-layer neural networks and solve complicated learning tasks. I also read over an implementation of a MLP posted on a online blog and learned some great tips about coding ML algorithms. 
+
+\item Prior to the start of this quarter I had only very limited experience in Python coding. Now I have become more comfortable with writing Python code and have especially understood why machine learning and Python make a dream team. Through this project I got to know the basic Python libraries, NumPy and SciPy, and trained my own machine using scikit-learn. Another useful tip I have learned from my coding experience is that after selecting the machine learning algorithm, most of the time is typically spent on rather mundane tasks, for example, reading, cleaning and exploring the data, and analyzing how to present data to the learning algorithm. This shows to me that ML skills can only be acquired through an integration of theoretical training and coding practice. The best way to master machine learning is to get your hands dirty with massive programming before staring at the abstract algorithms for too long.
+\end{enumerate}
+
+
+\end{document}  
