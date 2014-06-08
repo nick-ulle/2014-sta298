@@ -37,6 +37,7 @@ The purpose of this project is to demonstrate that deep learning is a more effec
 
 \section{Approaches--The Successful and The Failed}
 We tried four fundamentally different approaches to classifying the images.
+\input{n_writeup.tex}
 
 \subsection{K-means}
 Use spherical K-means on scaled and ZCA-whitened chunks (e.g. 16x16) of the training images, in order to build up a dictionary of K features. Images can then be mapped to a vector of length K by representing each chunk with its closest entry in the dictionary, and summing over the keys for all chunks. Classify based on the chunks. (Classification Rate: \%)

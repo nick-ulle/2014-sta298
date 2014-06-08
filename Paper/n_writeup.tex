@@ -1,0 +1,43 @@
+
+While we ultimately decided to use the OverFeat software for classification,
+we originally considered implementing our own algorithm as well.
+The intention was that we could find something with better interpretability,
+albeit with some loss of accuracy.
+One approach we found for this, based on a paper by Coates and Ng,
+was to use spherical k-means clustering for feature extraction.
+In particular, each image in the training set is divided into 16 by 16 patches
+of pixels, and spherical k-means clustering is applied to produce a dictionary of features.
+To classify a test image, 
+first each patch of the image is mapped to an entry in the feature dictionary.
+Many different mappings are possible;
+typically there is some tradeoff between efficiency and accuracy.
+The number of occurences of each feature can then be counted---although this
+is not the only approach---and provided to an apprporiately-trained linear
+classifier.
+
+This k-means-based approach to the problem had the potential to be easily
+interpretable: our hope was that many patches in the feature dictionary would
+have a clear correspondence to either cats or dogs.
+Moreover, the original paper was flexible to the needs of the reader.
+A wide array of possibilities for tuning and adjusting were presented,
+which would have given us many avenues for improving accuracy.
+
+Spherical k-means clustering is sufficiently exotic that we could find no
+pre-existing libraries implementing it, so we wrote our own implementation.
+A major concern was how well the algorithm would scale to our very large
+training set, and we made preliminary investigations into moving our
+Python code to Cython.
+Due to the astounding success of OverFeat on the data set, and the fact that
+many of our group members dropped out or were doing this for fun rather than
+credit, this was as far as we got with implementing the k-means clustering
+strategy.
+
+Nevertheless, this project was a learning experience.
+The spherical version of the k-means clustering algorithm was unfamiliar to
+all of us, as were the damped k-means updates advocated in the paper.
+Additionally, we learned that it's important to set clear project goals early
+on; our group was somewhat directionless until halfway through the quarter.
+
+
+
+
