@@ -27,5 +27,5 @@ Extract the neural net layers from the Overfeat feature selection algorithm, pre
 SVM: Use the labels and 4096-vectors to build a support vector machine with a variety of kernels on a subset of the data. Test prediction rate on the held-out data. 
 *(Classification Rate: 97.5%)*
 	
-Neural Net: Build a back-propogated neural network with 4096-length input layer and a 1D output layer. Play around with the number of hidden neurons and train until suitable number of iterations passes. Use the trained neural net to predict testing observations. 
+Neural Net: Build a back-propagated neural network with 4096-length input layer and a 1D output layer. Play around with the number of hidden neurons and train until suitable number of iterations passes. Use the trained neural net to predict testing observations. 
 *(Classification Rate: 96.9%)*
