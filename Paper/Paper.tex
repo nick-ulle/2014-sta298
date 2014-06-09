@@ -1,27 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage[english]{babel}
-\usepackage{graphicx, amsmath, amsfonts, amsthm, mathtools, listings, color, caption, rotating, subfigure, fullpage, textcomp, enumerate, float, listings, MnSymbol, wasysym}
-
-\lstset{
-	language=Python,
-	keywordstyle=\bfseries\ttfamily\color[rgb]{0,0,1},
-	identifierstyle=\ttfamily,
-	commentstyle=\color[rgb]{0.133,0.545,0.133},
-	stringstyle=\ttfamily\color[rgb]{0.627,0.126,0.941},
-	showstringspaces=false,
-	basicstyle=\tiny,
-	numberstyle=\scriptsize,
-	numbers=left,
-	stepnumber=1,
-	numbersep=10pt,
-	tabsize=2,
-	breaklines=true,
-	breakatwhitespace=false,
-	aboveskip={1.5\baselineskip},
-  columns=fixed,
-  upquote=true,
-  extendedchars=true,
-}
+\usepackage{graphicx, amsmath, amsfonts, amsthm, mathtools, listings, color, caption, rotating, subfigure, fullpage, textcomp, enumerate, float, listings, hyperref, MnSymbol, wasysym}
 
 \begin{document}
 \begin{center}
@@ -109,6 +88,15 @@ Having little experience with machine learning, we also hadn't done much program
 Another useful tip we learned was that after selecting the machine learning algorithm, most of the time was spent on rather mundane tasks. For example, reading and cleaning the training data, and analyzing how to present data to the learning algorithm took the better part of three or four weeks. Simply figuring out how to get the predictions from the OverFeat program into a form that the classifier would like took at least two weeks, and even the final output could've used more structure to prevent Segmentation Faults from OverFeat, which happened constantly. This shows that ML skills can only be acquired through an integration of theoretical training and coding practice--theory will only carry one so far before implementation must be worked out.
 
 \section{Appendix}
+\subsection*{Explanation of Code}
+Our source code can be found on our Github repository: \url{https://github.com/nick-ulle/STA298S14}. Each folder is associated with a particular approach we took towards classifying the testing set. The final approach we took is in the folder ``Overfeat\_Layer\_Classifiers''. The important source code files are described in detail:
+\begin{description}
+\item[ExtractLayers.py:] The code that extracts layers using the OverFeat neural network. The program determines the directories of all images and output folder, then makes a system call to the OverFeat program on each file. If run on the computing cluster, it takes an argument from the command line that tells it the number of the image it is going to extract. It prepends ``cat'' or ``dog'' on the number to get the corresponding cat and dog images to train. OverFeat is then run on each file. If OverFeat fails to generate a layer matrix because the image is too small, the image is doubled in size and run again. After max-pooling, it writes out the 4096-vector for cat and dog to a CSV file and exits.
+\item[Gauss\_batch.sh:] File containing parameters for the Gauss cluster job, to be run on all 20,000 training images.
+\item[TrainLayers\_SVM.py:] Trains a support vector machine on the 20,000 images, and tests the classification rate using a really crude cross-validation scheme. Uses linear, cubic, and RBF kernels, and outputs their predictions on a held-out set of the training data.
+\item[Test Predictions/ExtractLayers\_Fix.py:] The cluster failed on numerous jobs in the testing set. This fix file was run on my local machine, and implements a loop over the images instead of a cluster job. It is more or less the same file, but designed to be run with much more control and hand-holding.
+\end{description}
+
 \subsection{References}
 \begin{description}
 \item[] Philippe Golle. 2008. Machine learning attacks against the Asirra CAPTCHA. In Proceedings of the 15th ACM conference on Computer and communications security (CCS '08). ACM, New York, NY, USA, 535-542. DOI=10.1145/1455770.1455838 http://doi.acm.org/10.1145/1455770.1455838
